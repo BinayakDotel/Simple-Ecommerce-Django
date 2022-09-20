@@ -86,9 +86,9 @@ DATABASES = {
         'NAME': 'Cluster0',
         'ENFORCE_SCHEMA':False,
         'CLIENT':{
-            'host':'mongodb+srv://binayak_dotel:Nep%40lecommerce%23%40321@cluster0.wzn9sq2.mongodb.net/?retryWrites=true&w=majority',
-            'username':'binayak_dotel',
-            'password':'Nep@lecommerce#@321'
+            'host':'{{host_name}}',
+            'username':'{{username}}',
+            'password':'{{password}}'
         }
     }
 }'''
