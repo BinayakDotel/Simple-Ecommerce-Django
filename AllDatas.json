@@ -1,0 +1,72 @@
+{
+    "Categories":[
+        {
+            "name":"Oil"
+        },
+        {
+            "name":"HairCare"
+        },
+        {
+            "name":"Beauty"
+        },
+        {
+            "name":"EyeCare"
+        },
+        {
+            "name":"Lotions"
+        }
+    ],
+    "Products":
+            {
+                "Oil":[
+                    {
+                        "name":"Olive Oil",
+                        "price": "1000"
+                    },
+                    {
+                        "name":"Onion Oil",
+                        "price": "600"
+                    }
+                ],
+                "HairCare":[
+                    {
+                        "name":"Set Wet Gel",
+                        "price": "450"
+                    },
+                    {
+                        "name":"FA Cream",
+                        "price":"870"
+                    }
+                ],
+                "Beauty":[
+                    {
+                        "name":"Rose Water",
+                        "price": "250"
+                    },
+                    {
+                        "name":"Ponds Cream",
+                        "price": "140"
+                    }
+                ],
+                "EyeCare":[
+                    {
+                        "name":"Eye Cleaner",
+                        "price": "375"
+                    },
+                    {
+                        "name":"Lens",
+                        "price": "1500"
+                    }
+                ],
+                "Lotions":[
+                    {
+                        "name":"Vaselines",
+                        "price": "120"
+                    },
+                    {
+                        "name":"Sun Cream",
+                        "price": "180"
+                    }
+                ]
+            }
+    }

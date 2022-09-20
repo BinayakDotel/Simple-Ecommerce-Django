@@ -1,0 +1,36 @@
+{% extends 'base_add.html' %}
+
+{% block body-content %}
+<center>
+<form method="POST" class="login100-form validate-form"> 
+  {% csrf_token %}
+  <span class="login100-form-title">
+      Add Category
+  </span>
+    <div class="wrap-input100 validate-input">
+        <input class="input100" type="text" name="category" placeholder="Category Name">
+
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+    </div>
+  
+  <div class="container-login100-form-btn">
+      <input type="submit" value="Add Category" class="login100-form-btn"/>
+  </div>
+  {% if status %}
+    {% if status == false %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p>Something went wrong</p>    
+        </div>
+    {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <p>Success</p>    
+        </div>
+    {% endif %}
+  {% endif %}
+  
+</form>
+</center>
+{% endblock %}

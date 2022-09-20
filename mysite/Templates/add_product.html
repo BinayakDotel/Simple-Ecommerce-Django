@@ -1,0 +1,58 @@
+{% extends 'base_add.html' %}
+
+{% block body-content %}
+<center>
+<form method="POST" class="login100-form validate-form"> 
+  {% csrf_token %}
+  <span class="login100-form-title">
+      Add Product
+  </span>
+  <div class="wrap-input100 validate-input">
+      <li class="nav-item dropdown">                
+        <select name="category" id="category">
+            {% for item in categories %}
+                <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+        </select>
+      </li>  
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+  </div>
+    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" name="product_name" placeholder="Product Name">
+
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+    </div>
+
+
+  <div class="wrap-input100 validate-input" data-validate = "Password is required">
+      <input class="input100" type="text" name="price" placeholder="Price">
+      <span class="focus-input100"></span>
+      <span class="symbol-input100">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+      </span>
+  </div>
+  
+  <div class="container-login100-form-btn">
+      <input type="submit" value="Add Product" class="login100-form-btn"/>
+  </div>
+  {% if status %}
+    {% if status == false %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p>Something went wrong</p>    
+        </div>
+    {% else %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <p>Success</p>    
+        </div>
+    {% endif %}
+  {% endif %}
+  
+</form>
+</center>
+{% endblock %}
